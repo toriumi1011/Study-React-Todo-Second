@@ -7,15 +7,21 @@ const style = {
   borderRadius: '8px',
 }
 
-export const CompleteTodo = () => {
+export const CompleteTodo = (props) => {
+  const [todos] = props;
   return (
     <div style={style}>
       <p className="title">未完了のTODO</p>
       <ul>
-        <div className="list-row">
-          <li>いいい</li>
-          <button>完了</button>
-        </div>
+        {todos.map((todo) => {
+          return (
+            <div key={todo} className="list-row">
+              <li>{todo}</li>
+              <button>完了</button>
+
+            </div>
+          )
+        })}
       </ul>
     </div>
   )

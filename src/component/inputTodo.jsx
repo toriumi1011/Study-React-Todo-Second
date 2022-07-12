@@ -9,6 +9,8 @@ const style = {
 
 export const InputTodo = (props) => {
   return (
+
+
     <div style={style}>
       <input placeholder="TODOを入力" />
       <button>追加</button>
